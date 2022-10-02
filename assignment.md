@@ -1,4 +1,5 @@
 1. Explain what the simple `List` component does.
+
 List Component display an unordered List with some texts as List items. It takes an array (items) of strings(text) as props. For each items in the array, it maps through all and displays their content on the screen with a background color of 'Red'. When the user will click on single item, it will change to different color i.e Green.
 
 
@@ -46,13 +47,13 @@ text: PropTypes.string.isRequired,
 
 iv) It is not possible to map a null array 
 ```javascript
-\\error code
+//error code
 WrappedListComponent.defaultProps = {
   items: null,
 };
 ```
 ```javascript
-\\updated code
+//updated code
 WrappedListComponent.defaultProps = {
 items: [
             {text: "Ashtosh", index:1},
@@ -64,7 +65,7 @@ items: [
 
 Alternate way if we don't to store any value
 ```javascript
-\\updated code
+//updated code
 WrappedListComponent.defaultProps = {
     // items: null //giving null as default prop is never recommended
     items: undefined 
@@ -72,7 +73,7 @@ WrappedListComponent.defaultProps = {
 ```
 v) Unique key is missing
 ```javascript
-\\error code
+//error code
 <ul style={{ textAlign: 'left' }}>
       {items.map((item, index) => (
         <SingleListItem
@@ -85,7 +86,7 @@ v) Unique key is missing
     </ul>
 ```
 ```javascript
-\\updated code
+//updated code
         <ul style={{ textAlign: 'left' }}>
             {items.map((item, index) => (
                 <SingleListItem
@@ -102,7 +103,7 @@ v) Unique key is missing
 3. Please fix, optimize, and/or modify the component as much as you think is necessary.
 
 ```javascript
-\\error code
+//error code
 
 import React, { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
@@ -177,7 +178,7 @@ export default List;
 ```
 
 ```javascript
-\\updated code
+//updated code
 
 import React, { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
